@@ -4,21 +4,15 @@ export default function Concerts() {
   const episodes = [
     {
       id: 1,
-      title: 'The Palm Lume Sessions',
-      artist: 'Anushka, Vikrant & more',
+      title: '14th MARCH, 2026',
+      artist: 'Varun Sondur, Soham Swamy & Sumit Waychal',
       image: '/img4.jpeg',
     },
     {
       id: 2,
-      title: 'The Community Gig',
-      artist: 'Various Independent Artists',
+      title: '07th FEBRUARY, 2026',
+      artist: 'Anushka Ahire, Vedant Tawade & Balamurgan Thevar',
       image: '/img5.jpeg',
-    },
-    {
-      id: 3,
-      title: 'Intimate Sessions',
-      artist: 'Featured Artists',
-      image: '/img2.jpeg',
     },
   ]
 
@@ -109,22 +103,22 @@ export default function Concerts() {
                 }}
               >
                 <h3
-                  style={{ 
+                  style={{
                     fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: '2rem', 
-                    color: '#d4ff00', 
-                    marginBottom: '4px', 
-                    letterSpacing: '1px' 
+                    fontSize: '2rem',
+                    color: '#d4ff00',
+                    marginBottom: '4px',
+                    letterSpacing: '1px'
                   }}
                 >
                   {ep.title}
                 </h3>
                 <p
-                  style={{ 
+                  style={{
                     fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '0.9rem', 
-                    color: 'rgba(245,243,238,0.85)', 
-                    letterSpacing: '0.05em' 
+                    fontSize: '0.9rem',
+                    color: 'rgba(245,243,238,0.85)',
+                    letterSpacing: '0.05em'
                   }}
                 >
                   {ep.artist}
@@ -157,11 +151,11 @@ export default function Concerts() {
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLAnchorElement).style.background = '#111'
-              ;(e.currentTarget as HTMLAnchorElement).style.color = '#d4ff00'
+                ; (e.currentTarget as HTMLAnchorElement).style.color = '#d4ff00'
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLAnchorElement).style.background = '#d4ff00'
-              ;(e.currentTarget as HTMLAnchorElement).style.color = '#111'
+                ; (e.currentTarget as HTMLAnchorElement).style.color = '#111'
             }}
           >
             @thetinyroomconcert ↗
