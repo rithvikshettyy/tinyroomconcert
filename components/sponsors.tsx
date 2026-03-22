@@ -70,12 +70,14 @@ export default function Sponsors() {
             </span>
           </div>
 
-          <div style={{
-            width: '1px',
-            height: '100px',
-            background: 'rgba(212, 255, 0, 0.2)',
-            display: 'block'
-          }} />
+          <div 
+            className="hidden md:block"
+            style={{
+              width: '1px',
+              height: '100px',
+              background: 'rgba(212, 255, 0, 0.2)',
+            }} 
+          />
 
           <div style={{ textAlign: 'center' }}>
             <div style={{

@@ -29,7 +29,11 @@ export default function RollingGallery() {
       <div className="marquee">
         <div className="marquee-content">
           {[...photos, ...photos].map((src, i) => (
-            <div key={i} className="marquee-item" style={{ aspectRatio: '16/9', height: '250px', overflow: 'hidden' }}>
+            <div key={i} className="marquee-item" style={{ 
+              aspectRatio: '16/9', 
+              height: 'clamp(160px, 20vw, 250px)', 
+              overflow: 'hidden' 
+            }}>
               <img
                 src={src}
                 alt="Concert moment"
@@ -56,7 +60,7 @@ export default function RollingGallery() {
         }
         .marquee-content {
           display: flex;
-          gap: 20px;
+          gap: clamp(10px, 2vw, 20px);
           animation: scroll 40s linear infinite;
           width: max-content;
         }

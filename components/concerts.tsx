@@ -52,11 +52,11 @@ export default function Concerts() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '2px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+            gap: '1px',
             marginBottom: '4rem',
-            border: '2px solid #111',
             background: '#111',
+            border: '1px solid #111',
           }}
         >
           {episodes.map((ep) => (
@@ -137,17 +137,21 @@ export default function Concerts() {
             href="https://instagram.com/thetinyroomconcert"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-6 md:px-12"
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
               display: 'inline-block',
-              padding: '16px 48px',
+              paddingTop: '16px',
+              paddingBottom: '16px',
               border: '2px solid #111',
               color: '#111',
-              fontSize: '1.5rem',
+              fontSize: 'clamp(1rem, 5vw, 1.5rem)',
               textDecoration: 'none',
               letterSpacing: '2px',
               background: '#d4ff00',
               transition: 'all 0.3s ease',
+              maxWidth: '100%',
+              boxSizing: 'border-box'
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLAnchorElement).style.background = '#111'

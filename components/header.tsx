@@ -15,13 +15,12 @@ export default function Header() {
         borderBottom: '1px solid rgba(212, 255, 0, 0.2)' 
       }}
     >
-      <nav className="w-full px-10 py-4 flex items-center justify-between">
-        {/* Brand Logo - Simplified to single line, no box */}
+      <nav className="w-full px-4 md:px-10 py-4 flex items-center justify-between">
+        {/* Brand Logo - Responsive font size and wrapping */}
         <Link href="/" className="transition-opacity hover:opacity-80">
           <span
+            className="font-marker text-[min(4.5vw,1.4rem)] md:text-[1.4rem]"
             style={{ 
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: '1.4rem', 
               color: '#d4ff00', 
               letterSpacing: '2px',
               whiteSpace: 'nowrap'
@@ -100,18 +99,21 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile Menu - Matching new dark theme */}
+      {/* Mobile Menu - Full height fixed */}
       {isOpen && (
         <div 
           style={{ 
             background: 'rgba(13, 11, 8, 0.98)', 
             borderTop: '1px solid rgba(212, 255, 0, 0.2)',
             height: '100vh',
-            position: 'absolute',
+            position: 'fixed',
+            top: '72px', /* Height of header */
+            left: 0,
             width: '100%',
+            zIndex: 100
           }}
         >
-          <div className="px-8 py-12 flex flex-col gap-8">
+          <div className="px-4 py-12 flex flex-col gap-8">
             {[['About', '/about'], ['Episodes', '/episodes'], ['Contact', '/contact']].map(([label, href]) => (
               <Link
                 key={label}
